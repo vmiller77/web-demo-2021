@@ -3,9 +3,17 @@
 <body>
 	
 <style>
+h2 {
+	text-align: center;
+}
+
 form {
-  align-items: left;
-  display: block; 
+	padding: 25px;
+	align-items: left;
+	display: block; 
+	background-color: white;
+	justify-content: center;
+	border-radius: 12px;
 }
 
 p {
@@ -14,18 +22,29 @@ p {
 	
 body {background-color: coral;}
 	
+#button {
+	text-align:center;
+    
+}
+
+button {
+	background-color: #008CBA;
+    font-size: 24px;
+    border-radius: 12px;
+}
+
+
 </style>
 
 
 
 
 
-<h2> Take this quiz to see if you are a cool person </h2>
+<h2> Take this quiz to see if you are a cool person! </h2>
 
-<p>The select element defines a drop-down list:</p>
 
 <form id = "A1">
-<p>I use a curly brace { on the same line at the end of my if-statements </p>
+<p>#1: I use a curly brace { on the same line at the end of my if-statements </p>
   <label>Choose your answer: </label>
   <select id="A1Q1">
     <option value="5">Strongly Agree</option>
@@ -35,7 +54,7 @@ body {background-color: coral;}
     <option value="1">Strongly Disagree</option>
   </select>
   
-<p>QUESTION 2</p>
+<p>#2: Twix are a superior candy to snickers</p>
   <label>Choose your answer: </label>
   <select id="A1Q2">
     <option value="5">Strongly Agree</option>
@@ -45,7 +64,7 @@ body {background-color: coral;}
     <option value="1">Strongly Disagree</option>
   </select>
   
-<p>QUESTION 3</p>
+<p>#3: It is okay to have pineapple on pizza, but not my first choice</p>
   <label>Choose your answer: </label>
   <select id="A1Q3">
     <option value="5">Strongly Agree</option>
@@ -55,7 +74,7 @@ body {background-color: coral;}
     <option value="1">Strongly Disagree</option>
   </select>
  
-<p>QUESTION 4</p>
+<p>#4: Chick-fil-a lemonade is some of the best lemonade out there</p>
   <label>Choose your answer: </label>
   <select id="A1Q4">
     <option value="5">Strongly Agree</option>
@@ -65,7 +84,7 @@ body {background-color: coral;}
     <option value="1">Strongly Disagree</option>
   </select>
   
-<p>QUESTION 5</p>
+<p>#5: I know how to computer science</p>
   <label>Choose your answer: </label>
   <select id="A1Q5">
     <option value="5">Strongly Agree</option>
@@ -75,8 +94,10 @@ body {background-color: coral;}
     <option value="1">Strongly Disagree</option>
   </select>
 </form>
-	
+
+<div id="button">
 <button onclick="myFunction()">Click Me To See Your Results!</button>
+</div>
 
 <h1 id = "points">Area 1 Total:</h1>
 
@@ -88,12 +109,6 @@ function getPoints(questionID){
 }
 	
 function myFunction() {
-  let x = document.getElementById("A1");
-  console.log(x);
-  x.style.fontSize = "25px"; 
-  x.style.color = "red"; 
- 
-  
   
   var select = document.getElementById('A1Q1');
   console.log("**********")
