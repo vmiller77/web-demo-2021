@@ -9,17 +9,17 @@ form {
 }
 	
 </style>
-<p id="demo">Click the button to change the layout of this paragraph</p>
-
-<button onclick="myFunction()">Click Me!</button>
 
 
-<h2>The select Element</h2>
+
+
+
+<h2> Take this quiz to see if you are a cool person </h2>
 
 <p>The select element defines a drop-down list:</p>
 
 <form id = "A1">
-<p>QUESTION 1</p>
+<p>I use a curly brace { on the same line at the end of my if-statements </p>
   <label>Choose your answer: </label>
   <select id="A1Q1">
     <option value="5">Strongly Agree</option>
@@ -69,6 +69,8 @@ form {
     <option value="1">Strongly Disagree</option>
   </select>
 </form>
+	
+<button onclick="myFunction()">Click Me To See Your Results!</button>
 
 <h1 id = "points">Area 1 Total:</h1>
 <script>
@@ -104,7 +106,14 @@ function myFunction() {
   console.log("Area 1 Points: " + area1Points);
   
   
-  window.alert("area 1 points: " + area1Points);
+  window.alert("You scored this many points: " + area1Points);
+  if(area1Points > 20){
+	  window.alert("You are very cool!");
+  else if (area1Points > 10 ){
+	  window.alert("You are not cool, but you are not a loser.");
+  else {
+	  window.alert("You are not cool and you are not NOT a loser.");
+  }
 
 }
 
