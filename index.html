@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Click the button to change the layout of this paragraph</p>
+
+<button onclick="myFunction()">Click Me!</button>
+
+
+<h2>The select Element</h2>
+
+<p>The select element defines a drop-down list:</p>
+
+<form id = "A1">
+  <label>QUESTION 1</label>
+  <select id="A1Q1">
+    <option value="5">Strongly Agree</option>
+    <option value="4">Agree</option>
+    <option value="3">Neutral</option>
+    <option value="2">Disagree</option>
+    <option value="1">Strongly Disagree</option>
+  </select>
+  
+  <label>QUESTION 2</label>
+  <select id="A1Q2">
+    <option value="5">Strongly Agree</option>
+    <option value="4">Agree</option>
+    <option value="3">Neutral</option>
+    <option value="2">Disagree</option>
+    <option value="1">Strongly Disagree</option>
+  </select>
+  
+  <label>QUESTION 3</label>
+  <select id="A1Q3">
+    <option value="5">Strongly Agree</option>
+    <option value="4">Agree</option>
+    <option value="3">Neutral</option>
+    <option value="2">Disagree</option>
+    <option value="1">Strongly Disagree</option>
+  </select>
+  
+  <label>QUESTION 4</label>
+  <select id="A1Q4">
+    <option value="5">Strongly Agree</option>
+    <option value="4">Agree</option>
+    <option value="3">Neutral</option>
+    <option value="2">Disagree</option>
+    <option value="1">Strongly Disagree</option>
+  </select>
+  
+  <label>QUESTION 5</label>
+  <select id="A1Q5">
+    <option value="5">Strongly Agree</option>
+    <option value="4">Agree</option>
+    <option value="3">Neutral</option>
+    <option value="2">Disagree</option>
+    <option value="1">Strongly Disagree</option>
+  </select>
+</form>
+
+<h1 id = "points">Area 1 Total:</h1>
+<script>
+function getPoints(questionID){
+	var select = document.getElementById(questionID);
+ 	return select[select.selectedIndex].value;
+
+}
+function myFunction() {
+  let x = document.getElementById("A1");
+  console.log(x);
+  x.style.fontSize = "25px"; 
+  x.style.color = "red"; 
+ 
+  
+  
+  var select = document.getElementById('A1Q1');
+  console.log("**********")
+  console.log("select: " + select)
+  console.log("selected Index: " + select.selectedIndex)
+  console.log("selected item : " +select[select.selectedIndex].value);
+ 
+  var area1Points = 0;
+  var area2Points = 0;
+  var area3Points = 0;
+  var area4Points = 0;
+  
+  area1Points = area1Points + parseInt(getPoints('A1Q1'));
+  area1Points = area1Points + parseInt(getPoints('A1Q2'));
+  area1Points = area1Points + parseInt(getPoints('A1Q3'));
+  area1Points = area1Points + parseInt(getPoints('A1Q4'));
+  area1Points = area1Points + parseInt(getPoints('A1Q5'));
+  console.log("Area 1 Points: " + area1Points);
+  
+  
+  window.alert("area 1 points: " + area1Points);
+
+}
+
+
+
+</script>
+
+</body>
+</html>
